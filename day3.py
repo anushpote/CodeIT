@@ -13,3 +13,7 @@ print(a**b) #power
 # Ctrl + I Windsurf Command
 
 #Relational Operators
+print(5>2)
+print(5<2)
+print(5>=2)
+print(5<=2)
