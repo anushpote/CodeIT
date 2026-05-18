@@ -1,11 +1,15 @@
-a= 10
-b= 5
+a= 5
+b= 10
 
 #Arithemetic Operators
 print(a+b)
 print(a-b)
 print(a*b)
 print(a/b)
-print(a//b) #Integer division
+print(a//b) #Integer division quotient
 print(a%b) #modulo -> Remainder
-print(a**b)
+print(a**b) #power
+
+# Ctrl + I Windsurf Command
+
+#Relational Operators
