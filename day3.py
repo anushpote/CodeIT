@@ -38,8 +38,18 @@ english_pass_marks = 30
 
 english_passed = english_marks>=english_pass_marks
 
+#The gap before print in line 43 and 45 is called Indentation
 if english_passed:
     print("They passed")
 else:
     print("They failed")
 
+#2nd example
+if english_marks >= 90:
+    print("A+")
+elif english_marks >= 80:
+    print("A")
+elif english_marks >= 70:
+    print("B+")
+else:
+    print("B")
