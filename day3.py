@@ -10,7 +10,6 @@ b= 10
 # print(a%b) #modulo -> Remainder
 # print(a**b) #power
 
-
 #Relational Operators
 # print(5>2)
 # print(5<2)
