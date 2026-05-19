@@ -22,19 +22,35 @@
 #     print(f"{number} * {num} = {number*num}")
 
 # for and for each loop
-sentence = "We love Nepal"
-vowels = "aeiouAEIOU" 
-count = 0
+# sentence = "We love Nepal"
+# vowels = "aeiouAEIOU" 
+# count = 0
 
-for each_char in sentence:
-    #check if its a vowel
-    if each_char in vowels:
-        count += 1
-        print(each_char)
+# for each_char in sentence:
+#     #check if its a vowel
+#     if each_char in vowels:
+#         count += 1
+#         print(each_char)
         
-    elif each_char==" ":
-        print("Here is space")
+#     elif each_char==" ":
+#         print("Here is space")
+#     else:
+#         print(f"{each_char} is a consonant")
+
+# print(f"There are {count} vowels")
+
+#2 Infinite Looping (while loop)
+
+batti_cha = True
+
+while batti_cha:
+    print("Fan ghumdai xa")
+
+    user_answer = input("Batti xa? (yes/no)")
+
+    if user_answer == "yes":
+        batti_cha = True
+    elif user_answer == "no":
+        batti_cha = False
     else:
-        print(f"{each_char} is a consonant")
-print(f"There are {count} vowels")
-    
+        print("Write only yes or no!!!")
