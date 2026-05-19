@@ -6,5 +6,12 @@
 
 
 
-for i in range(5):
+for i in range(1, 5, 2):    # 1 is starting value, 5 is stopping value, 5 is excluded, 2 is called step value
     print("Welcome home", i)
+
+# Multiplication Table
+# Table of 2
+
+for num in range(1, 11,):
+    print(f"3 * {num} = {num*3}")
+
