@@ -12,6 +12,12 @@ for i in range(1, 5, 2):    # 1 is starting value, 5 is stopping value, 5 is exc
 # Multiplication Table
 # Table of 2
 
-for num in range(1, 11,):
-    print(f"3 * {num} = {num*3}")
+# for num in range(1, 11,):
+#     print(f"3 * {num} = {num*3}")
 
+# Multiplication of any number
+
+number = int(input("Enter any number for multiplication table: "))
+
+for num in range(1, 11):
+    print(f"{number} * {num} = {number*num}")
