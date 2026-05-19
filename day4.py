@@ -17,7 +17,12 @@ for i in range(1, 5, 2):    # 1 is starting value, 5 is stopping value, 5 is exc
 
 # Multiplication of any number
 
-number = int(input("Enter any number for multiplication table: "))
+# number = int(input("Enter any number for multiplication table: "))
 
-for num in range(1, 11):
-    print(f"{number} * {num} = {number*num}")
+# for num in range(1, 11):
+#     print(f"{number} * {num} = {number*num}")
+
+sentence = "We love Nepal"
+
+for char in sentence:
+    print(char)
