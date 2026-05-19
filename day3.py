@@ -10,7 +10,6 @@ b= 10
 # print(a%b) #modulo -> Remainder
 # print(a**b) #power
 
-# Ctrl + I Windsurf Command
 
 #Relational Operators
 # print(5>2)
