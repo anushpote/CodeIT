@@ -53,32 +53,57 @@ participants = ["ram", "hari", "shyam"]
 # for num, name in enumerate(participants, start=1):
 #     print("List of participants: ", participants)
 
-participants = []
+# participants = []
 
-MENU = """""
-    ============MENU==========
-    1. Add new participant
-    2. Remove existing participant
-    3. Show all participants
-    Q. Quit
+# MENU = """
+#     ============MENU==========
+#     1. Add new participant
+#     2. Remove existing participant
+#     3. Show all participants
+#     Q. Quit
 
-"""
+# """
 
-print(MENU)
+# while True:
+#     choice = input("Enter your choice (1, 2, 3, Q/q): ").upper()
+#     if choice == "Q":
+#         print("Thank you for using our program!")
+#         break
+#     elif choice == "1":
+#         new_name = input("Enter new participant's name: ")
+#         participants.append(new_name)
+#         print(f"Added new participant {new_name}")
+#     elif choice == "2":
+#         print(f"The list of participants are: {participants}")
+#     elif choice == "3":
+#         remove_name = input("Enter the name you want to remove: ")
+#         if remove_name in participants:
+#             participants.remove(remove_name)
+#             print(f"{remove_name} has been removed from the list!")
+#     else:
+#         print("Please enter right choice!")
+#     print(MENU)
+    
 
-while True:
-    choice = input("Enter your choice (1, 2, 3, Q/q): ")
-    if choice == "Q":
-        print("Thank you for using our program!")
-        break
-    elif choice == "q":
-        print("Thank you for using our program!")
-        break
-    elif choice == "1":
-        print("Commands to add new participant")
-    elif choice == "2":
-        print("Commands to add new participant")
-    elif choice == "3":
-        print("Commands to add new participant")
-    else:
-        print("Please enter right choice!")
+# Tuple
+final_participants = tuple(participants)
+
+#print("final", final_participants)
+
+# ['ram', 'hari'] -> list can be modified, mutable
+# ('ram', 'hari') -> tuple cannot be modified once created, immutable
+
+tuple_example = ("ram", "hari", "sita", "gita")
+
+#tuple_example.append() -> cannot append, inserted or modified
+
+num, name = 1, "Ram"    #unpacking
+
+# for data in enumerate(participants, start=1):
+#     print(data)
+
+a, *mids, b = 1, 2, 3, 4
+
+print(a)
+print(mids)
+print(b)
