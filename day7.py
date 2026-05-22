@@ -51,6 +51,7 @@
 # send_email_to_loggedin_user()
 
 # IDK what happened here
+
 # def add(*numbers):
 #     print(numbers)
 #     r = 0
@@ -61,3 +62,20 @@
 
 # add(1,2,3,4,5)
 # print(add(1,2,3,4,5,6))
+
+#############################################
+
+# def show_info(*info):
+#     print(info)
+
+# show_info(name="Ram", age = 23, address ="ktm") # Cannot return value
+
+# def show_info(**info):
+#     print(info)
+
+# show_info(name="Ram", age = 23, address ="ktm") # It will return value
+
+# Note: single * in param means any number of positional arguments
+# Note: single ** in param means any number of keyword arguments
+
+# def some_func(p1, p2 =0, **kwargs): #p1 is required, p2 is optional, kwargs is dictionary
