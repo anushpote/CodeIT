@@ -57,7 +57,6 @@
 #     r = 0
 #     for value in numbers:
 #         r += value
-
 #     return r
 
 # add(1,2,3,4,5)
@@ -79,3 +78,12 @@
 # Note: single ** in param means any number of keyword arguments
 
 # def some_func(p1, p2 =0, **kwargs): #p1 is required, p2 is optional, kwargs is dictionary
+
+########################################
+
+# def example():
+#     print("Hi")
+
+#     return just_for_example
+
+#     print("hello")  #Doesn't print since it came after return
