@@ -34,11 +34,30 @@
 
 #############################################################
 
-def add(a,b):
-    print(a+b)
+# def add(a,b):
+#     # print(a+b)    # Not needed if return(a+b) is written
 
-    return a+b  # if return is not written, it prints "None"
+#     return a+b  # if return is not written, it prints "None"
 
-result = add(3,4)
+# result = add(3,4)
 
-print("result", result)
+# #result = 2 + 3 - add(2,100) + 7 # It works
+
+# print("result", result)    
+
+#########################################################
+
+# Best Function is that function which has no parameters. For e.g.:
+# send_email_to_loggedin_user()
+
+# IDK what happened here
+# def add(*numbers):
+#     print(numbers)
+#     r = 0
+#     for value in numbers:
+#         r += value
+
+#     return r
+
+# add(1,2,3,4,5)
+# print(add(1,2,3,4,5,6))
