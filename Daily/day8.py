@@ -9,6 +9,8 @@
 
 # from day6 import numbers, largest number
 
+# from day5 import * # to import everything from day5.py file
+
 # In above example, day 6 is the module, and this file i.e., day8.py is the script
 
 ####################################################
