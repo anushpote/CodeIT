@@ -32,44 +32,58 @@
 #             print("Password Found", cleaned_pass)
 
 ######################################################
+# Writing in a file (Guess number game)
+# import random
 
-import random
+# # Generate random number between 1 to 100
 
-# Generate random number between 1 to 100
+# secret_number = random.randint(1, 100)
 
-secret_number = random.randint(1, 100)
+# print("Welcome to the Number Guessing Game!")
 
-print("Welcome to the Number Guessing Game!")
+# print("Guess a number between 1 and 100")
 
-print("Guess a number between 1 and 100")
+# with open("guess_game_counter.txt", "r") as file:
+#     current_min_guess = file.read()
 
-with open("guess_game_counter.txt", "r") as file:
-    current_min_guess = file.read()
+# if current_min_guess.strip() == "0":
+#     print("No one has scored")
+# else:
+#     print("Minimum guesses till now: ", current_min_guess)
 
-if current_min_guess.strip() == "0":
-    print("No one has scored")
-else:
-    print("Minimum guesses till now: ", current_min_guess)
+# print("Minimum guess till now: ", )
 
-print("Minimum guess till now: ", )
+# counter = 0
 
-counter = 0
+# while True:
+#     guess = int(input("Enter your guess: "))
 
-while True:
-    guess = int(input("Enter your guess: "))
+#     counter += 1
+#     if guess < secret_number:
+#         print("Too low")
+#     elif guess > secret_number:
+#         print("Too high")
+#     else:
+#         print("Congratulation! You guessed the correct number")
+#         break
 
-    counter += 1
-    if guess < secret_number:
-        print("Too low")
-    elif guess > secret_number:
-        print("Too high")
-    else:
-        print("Congratulation! You guessed the correct number")
-        break
+# print("You made successful guess after ", counter, "times")
+# print("Minimum guess till now: ", current_min_guess)
 
-print("You made successful guess after ", counter, "times")
-print("Minimum guess till now: ", current_min_guess)
+# if int(current_min_guess) == 0 or counter < int(current_min_guess):
+#     with open("mytext.txt","w") as file:
+#         file.write(str(counter))
 
-if int(current_min_guess) == 0 or counter < int(current_min_guess):
-    with open("mytext.txt","w") as file:
-        file.write(str(counter))
+#####################################################
+
+#   Writing in a file and Append in a file
+
+with open("web_logs.txt","a") as file:
+    user_inputs =[]
+    while True:
+        user_input = input("(q for quit)>>> ").lower()
+        if user_input == "q":
+            break
+        user_inputs.append(f"{user_input}\n")
+
+    file.writelines(user_inputs)
