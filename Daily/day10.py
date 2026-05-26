@@ -78,12 +78,39 @@
 
 #   Writing in a file and Append in a file
 
-with open("web_logs.txt","a") as file:
-    user_inputs =[]
-    while True:
-        user_input = input("(q for quit)>>> ").lower()
-        if user_input == "q":
-            break
-        user_inputs.append(f"{user_input}\n")
+# with open("web_logs.txt","a") as file:
+#     user_inputs =[]
+#     while True:
+#         user_input = input("(q for quit)>>> ").lower()
+#         if user_input == "q":
+#             break
+#         user_inputs.append(f"{user_input}\n")
 
-    file.writelines(user_inputs)
+#     file.writelines(user_inputs)
+
+#######################################################
+
+# CSV Module
+
+import csv
+
+with open("class6marks.csv","r") as file:
+    #reader = csv.reader(file, delimiter="|")    # if there is no comma in the list. Delimeter can be used to mark a symbol as a separator. Here | is now a separator
+
+    reader = csv.reader(file)
+    header = next(reader)   # reader will return first row
+    for row in reader:
+        #print(row)
+        name = row[0]
+        marks = row[1:]
+
+        print("Student ", name)
+        print("Marks: ", marks)
+
+        total = 0
+        no_of_sub = len(marks)
+        for mark in marks:
+            int_mark = int(mark)
+            total += int_mark
+        percentage = total/no_of_sub
+        print(name, percentage, "%")
