@@ -16,11 +16,60 @@
 
 # WPA/WPS Tester
 
-wifi_password = "admin123"  # Pretend the password is encoded
-with open("mytext.txt","r") as passwords_file:
-    for password in passwords_file:
-        cleaned_pass = password.strip() # strip(): remove the new line that spawns when you press enter
-        #print(cleaned_pass, len(cleaned_pass)) # not necessary to print this line
+# #admin123 -> 3424fsjd09iwe
+# wifi_password = "admin123"  # Pretend the password is encoded
+# with open("mytext.txt","r") as passwords_file:
+#     print(type(passwords_file))
+#     for password in passwords_file:
+#         cleaned_pass = password.strip() # strip(): remove the new line that spawns when you press enter
+#         #print(cleaned_pass, len(cleaned_pass)) # not necessary to print this line
+#         #hash_value = calculate_hash(cleaned_pass) -> 3424fsjd09iwe
 
-        if cleaned_pass == wifi_password:
-            print("Password Found", cleaned_pass)
+#         # if hash_value == wifi_password:
+#         #     print("Password Found", cleaned_pass)
+
+#         if cleaned_pass == wifi_password:
+#             print("Password Found", cleaned_pass)
+
+######################################################
+
+import random
+
+# Generate random number between 1 to 100
+
+secret_number = random.randint(1, 100)
+
+print("Welcome to the Number Guessing Game!")
+
+print("Guess a number between 1 and 100")
+
+with open("guess_game_counter.txt", "r") as file:
+    current_min_guess = file.read()
+
+if current_min_guess.strip() == "0":
+    print("No one has scored")
+else:
+    print("Minimum guesses till now: ", current_min_guess)
+
+print("Minimum guess till now: ", )
+
+counter = 0
+
+while True:
+    guess = int(input("Enter your guess: "))
+
+    counter += 1
+    if guess < secret_number:
+        print("Too low")
+    elif guess > secret_number:
+        print("Too high")
+    else:
+        print("Congratulation! You guessed the correct number")
+        break
+
+print("You made successful guess after ", counter, "times")
+print("Minimum guess till now: ", current_min_guess)
+
+if int(current_min_guess) == 0 or counter < int(current_min_guess):
+    with open("mytext.txt","w") as file:
+        file.write(str(counter))
