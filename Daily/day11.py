@@ -61,16 +61,35 @@
 
 #########################################################
 
-nums = [1,2,3,4,5,6,7,8,9,10]
+# Even and odd using comprehension
 
-even_numbers = [num for num in nums if num % 2 == 0]
-odd_numbers = [num for num in nums if num % 2 != 0]
+# nums = [1,2,3,4,5,6,7,8,9,10]
 
+# even_numbers = [num for num in nums if num % 2 == 0]
+# odd_numbers = [num for num in nums if num % 2 != 0]
 
-# 1. what to keep in new list ?
-# 2. where does that come from ?
-# 3. (optional) on what condition new value should be kept ?
-# 4. 
+# # 1. what to keep in new list ?
+# # 2. where does that come from ?
+# # 3. (optional) on what condition new value should be kept ?
 
-print(even_numbers)
-print(odd_numbers)
+# print(even_numbers)
+# print(odd_numbers)
+
+####################################################################
+
+# Flipping items in list
+
+life_to_emotion = {
+    5: "🫡",
+    4: "😣",
+    3: "😢",
+    2: "😭",
+    1: "😅"
+}
+
+emotion_to_life = {
+    value:key
+    for key, value in life_to_emotion.items()
+}
+print(life_to_emotion)
+print(emotion_to_life)
