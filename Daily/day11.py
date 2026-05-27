@@ -19,13 +19,24 @@
 
 ##############################################################################
 
-students = ["ram","hari","shyam"]
+# Using finally
+
+# students = ["ram","hari","shyam"]
+
+# try:
+#     students.remove("shyam")
+# except ValueError:
+#     print("The item you are trying to remove does not exist.")
+# else:
+#     print("Removed successfully")
+# finally:
+#     print("Student Removal program completed")
+
+#####################################################
 
 try:
-    students.remove("shyam")
-except ValueError:
-    print("The item you are trying to remove does not exist.")
-else:
-    print("Removed successfully")
-finally:
-    print("Student Removal program completed")
+    with open("new.txt","r") as file:
+        print(file.read())
+except FileNotFoundError:
+    print("The file does not exist.")
+    print("Please check the file name or file path.")
