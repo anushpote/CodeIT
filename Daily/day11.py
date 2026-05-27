@@ -96,18 +96,57 @@
 
 #######################################################
 
-# Decorator: (decorates existing function)
+# # Decorator: (decorates existing function)
 
-def deco(func):
-    def wrapper_func():
-        print("this is before function")
-        func()
-        print("this is after the function")
+# def deco(func):
+#     def wrapper_func():
+#         print("this is before function")
+#         func()
+#         print("this is after the function")
 
+#     return wrapper_func
+
+# @deco
+# def just_func():
+#     print("this is just a function")
+
+# just_func()
+
+################################################
+
+# Use Case of Decorator
+
+# # Measure execution time
+# import time 
+
+# start = time.time()
+# # some task
+# for i in range(1000000):
+#     pass
+# time.sleep
+
+# end = time.time()
+
+import time
+ 
+def show_execution_time(func):
+    def wrapper_func(*args, **kwargs):
+        
+        start = time.time()
+        func(*args, **kwargs)
+        end = time.time()
+        print("Execution time: ", end-start, "seconds")
     return wrapper_func
 
-@deco
-def just_func():
-    print("this is just a function")
+@show_execution_time
+def heavy_task_func(a, b=0):    
+    print("Heavy Task Start")
+    time.sleep(3.5)
+    print("Values are: ", a, b)
+    print("Heavy Task End")
 
-just_func()
+heavy_task_func(0,1)
+
+# @show_execution_time
+# def a(a,b,c):
+#     pass
