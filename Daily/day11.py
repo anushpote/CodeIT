@@ -77,19 +77,37 @@
 
 ####################################################################
 
-# Flipping items in list
+# # Flipping items in list
 
-life_to_emotion = {
-    5: "🫡",
-    4: "😣",
-    3: "😢",
-    2: "😭",
-    1: "😅"
-}
+# life_to_emotion = {
+#     5: "🫡",
+#     4: "😣",
+#     3: "😢",
+#     2: "😭",
+#     1: "😅"
+# }
 
-emotion_to_life = {
-    value:key
-    for key, value in life_to_emotion.items()
-}
-print(life_to_emotion)
-print(emotion_to_life)
+# emotion_to_life = {
+#     value:key
+#     for key, value in life_to_emotion.items()
+# }
+# print(life_to_emotion)
+# print(emotion_to_life)
+
+#######################################################
+
+# Decorator: (decorates existing function)
+
+def deco(func):
+    def wrapper_func():
+        print("this is before function")
+        func()
+        print("this is after the function")
+
+    return wrapper_func
+
+@deco
+def just_func():
+    print("this is just a function")
+
+just_func()
