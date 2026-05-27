@@ -2,10 +2,12 @@
 
 #1a = 5  # Syntax error. Not exception
 
-try:
-    user_input = int(input("Enter a number: "))
-except:
-    print("Something went wrong!")
+user_input = int(input("Enter a number: "))
+
+# try:
+#     user_input = int(input("Enter a number: "))
+# except Exception as e:
+#     print("Something went wrong!", e)
 
 print("Something running")
 
