@@ -47,14 +47,30 @@
 
 # Comprehensions: (More effective operations similar to loop)
 
-marks = ['45','36','50','76']
+# marks = ['45','36','50','76']
 
-# For example
+# # For example
 
-int_marks = [int(mark) for mark in marks]  # list comprehension
-print(marks)
-print(int_marks)
+# int_marks = [int(mark) for mark in marks]  # list comprehension
+# print(marks)
+# print(int_marks)
 
-total = sum(int_marks)
+# total = sum(int_marks)
 
-print(total)
+# print(total)
+
+#########################################################
+
+nums = [1,2,3,4,5,6,7,8,9,10]
+
+even_numbers = [num for num in nums if num % 2 == 0]
+odd_numbers = [num for num in nums if num % 2 != 0]
+
+
+# 1. what to keep in new list ?
+# 2. where does that come from ?
+# 3. (optional) on what condition new value should be kept ?
+# 4. 
+
+print(even_numbers)
+print(odd_numbers)
