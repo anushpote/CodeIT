@@ -34,9 +34,27 @@
 
 #####################################################
 
-try:
-    with open("new.txt","r") as file:
-        print(file.read())
-except FileNotFoundError:
-    print("The file does not exist.")
-    print("Please check the file name or file path.")
+# FileNotFoundError 
+
+# try:
+#     with open("new.txt","r") as file:
+#         print(file.read())
+# except FileNotFoundError:
+#     print("The file does not exist.")
+#     print("Please check the file name or file path.")
+
+#######################################################
+
+# Comprehensions: (More effective operations similar to loop)
+
+marks = ['45','36','50','76']
+
+# For example
+
+int_marks = [int(mark) for mark in marks]  # list comprehension
+print(marks)
+print(int_marks)
+
+total = sum(int_marks)
+
+print(total)
