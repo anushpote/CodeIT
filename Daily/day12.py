@@ -107,3 +107,47 @@
 #         print(value)
 
 # print("End of while loop")
+
+###########################################
+
+# Generator (Way of creating iterators)
+
+# def num_gen():
+#     yield 1     # freeze + return
+#     yield 2     # freeze + return
+#     yield 3     # freeze + return
+#     yield 4     # freeze + return
+#     yield 5     # freeze + return
+#     yield 6     # freeze + return
+
+# Use case
+
+# nums = num_gen()
+
+# print(nums.__next__)
+
+# print(list(nums))
+
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+# print(next(nums))
+
+
+def even_num_generator():
+    start=2 
+    while True:
+        yield start
+        start += 2
+
+even_nums = even_num_generator()
+
+print(next(even_nums))
+print(next(even_nums))
+print(next(even_nums))
+print(next(even_nums))
+print(next(even_nums))
+print(next(even_nums))
