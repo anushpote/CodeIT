@@ -137,17 +137,37 @@
 # print(next(nums))
 
 
-def even_num_generator():
-    start=2 
-    while True:
-        yield start
-        start += 2
+# def even_num_generator():
+#     start=2 
+#     while True:
+#         yield start
+#         start += 2
 
-even_nums = even_num_generator()
+# even_nums = even_num_generator()
 
-print(next(even_nums))
-print(next(even_nums))
-print(next(even_nums))
-print(next(even_nums))
-print(next(even_nums))
-print(next(even_nums))
+# print(next(even_nums))
+# print(next(even_nums))
+# print(next(even_nums))
+# print(next(even_nums))
+# print(next(even_nums))
+# print(next(even_nums))
+
+##################################
+
+# Example
+
+# def range(stop):
+#     start = 0
+#     while start<stop:
+#         yield start
+#         start += 1
+
+# r = range(50)
+
+# for num in r:
+#     print(num)
+
+r = range(10)
+ri = iter(r)
+print(r.__iter__)
+# print(r.__next__)
