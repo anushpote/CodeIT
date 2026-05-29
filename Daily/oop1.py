@@ -25,7 +25,7 @@ class Student:
 s1 = Student("ram","ktm",100)
 s2 = Student("hari","bhkt",60)
 
-s1.calculate_grade()
-s2.calculate_grade()
+# s1.calculate_grade()
+# s2.calculate_grade()
 
-print(type(s1))
+# print(type(s1))
