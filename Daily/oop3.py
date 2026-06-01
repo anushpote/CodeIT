@@ -46,26 +46,70 @@
 
 # Inheritance
 
-class User:
-    def __init__(self, username, password, email = "example@ex.com"):
-        self.username = username
+# class User:
+#     def __init__(self, username, password, email = "example@ex.com"):
+#         self.username = username
 
-        if len(password) <6:
-            raise Exception("Password must be 6 characters long")
-        self.password = password
+#         if len(password) <6:
+#             raise Exception("Password must be 6 characters long")
+        
+#         if username in password:
+#             raise Exception("Password shouldn't contain username")
+        
+#         self.password = password
 
-    def __str__(self):
-        return f"{self.username}'s account"
+#     def __str__(self):
+#         return f"{self.username}'s account"
     
-# u1 = User("ram", "ram123@")
+# # u1 = User("ram", "hari123@")
 
-# print(u1)
+# # print(u1)
 
-class Student(User):    # class Student is inheriting from class User
-    def __init__(self, username, password, father_name, email="optional.com"):  # Method overriding
-        super().__init__(username, password, email)  
-        self.father_name = father_name
+# class Student(User):    # class Student is inheriting from class User
+#     def __init__(self, username, password, father_name, email="optional.com"):  # Method overriding
+#         super().__init__(username, password, email)  
+#         self.father_name = father_name
 
-s1 = Student("Ram","ram123@", "ram's father")
+# # s1 = Student("Ram","ram123@", "ram's father")
 
-print(s1)
+# # print(s1)
+
+# class Teacher(User):
+#     def __init__(self, username, password, salary, email="example@ex.com"):
+#         super().__init__(username, password, email)
+#         self.salary = salary
+
+# t1 = Teacher("hari", "abc@123",4500)
+# print(t1)
+
+#####################################################
+
+# Common uses of inheritance in Django
+
+# class Student(models.Model):
+    # name = model.Charfield
+    # address = model.Charfield
+    # email = model.Charfield
+    # contact = model.Charfield
+
+# Student.objects.create(
+#     name = name,
+#     name = name,
+#     name = name,
+#     name = name
+# )
+
+# s1.address = "BTM"
+# s1.save()
+
+# Forms
+
+# class StudentForm(forms.ModelForm):
+#     #fields
+
+# form_object = StudentForm()
+
+# # {{form_object}}
+
+# form_object.is_valid()
+# form_object.save()
