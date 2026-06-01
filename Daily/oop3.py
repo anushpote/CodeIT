@@ -113,3 +113,9 @@
 
 # form_object.is_valid()
 # form_object.save()
+
+# ORM -> Object Relational Mapping
+
+#############################################
+
+# Virtual Environment
