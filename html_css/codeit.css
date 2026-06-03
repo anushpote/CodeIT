@@ -1,0 +1,43 @@
+:root {
+    --primary: #f85604;
+    --primary-dark: #de400b;
+    --secondary: #61927A;
+    --bg-color: #f9f9f9;
+}
+
+strong{
+    border: 2px solid red;
+    color: var(--primary);
+    border-color: color-mix(in oklab, var(--primary) 20%, transparent);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+h1{
+    font-size: 2.5rem;    
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.sub-heading{
+    font-size: 0.9rem;
+}
+
+#short-para{
+    color: blue;
+    margin-top: 8px;
+}
+
+.badges{        
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.badges div{
+    border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+}
