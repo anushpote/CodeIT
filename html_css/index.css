@@ -1,0 +1,43 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+
+nav{
+
+}
+
+.container{
+    border: 1px solid red;
+    width: 85vw;
+    margin: auto;
+}
+
+.top-nav{
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.codeit-logo{
+    height: 2.5rem;
+}
+
+.top-nav div{   
+}
+
+.mid-top-nav{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.mid-top-nav span{
+    text-align: center;
+}
+
+.end-top-nav{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
