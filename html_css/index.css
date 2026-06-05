@@ -3,12 +3,22 @@
    padding: 0; 
 }
 
-nav{
+:root {
+    --primary: #f85604;
+    --primary-dark: #de400b;
+    --secondary: #61927A;
+    --bg-color: #f9f9f9;
+    --light-bg-color: #f19c5f3e;
+    font-family: "Inter", sans-serif;
+}
 
+/* Navbar */
+nav{
+    box-shadow: 0 4px 3px 0 #c4c4c45c;
 }
 
 .container{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 85vw;
     margin: auto;
 }
@@ -19,25 +29,176 @@ nav{
     justify-content: space-between;
 }
 
-.codeit-logo{
-    height: 2.5rem;
-}
-
-.top-nav div{   
-}
-
 .mid-top-nav{
     display: flex;
-    gap: 100px;
+    gap: 25px;
     align-items: center;
 }
 
 .mid-top-nav span{
     text-align: center;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.mid-top-nav span i{
+    font-size: 1.2rem;
 }
 
 .end-top-nav{
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+.end-top-nav form{
+    border: 1px solid var(--secondary);
+    padding: 8px;
+    border-radius: 24px;
+}
+
+.end-top-nav form i{
+    color: var(--secondary);
+}
+
+.end-top-nav form input{
+    border: none;
+    outline: none;
+}
+
+
+.codeit-logo{
+    height: 2.5rem;
+}
+
+.login-btn-wrapper{
+    color: var(--primary-dark);
+    background-color: var(--light-bg-color) ;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.login-btn-wrapper a{
+    margin-left: 4px;
+    text-decoration: none;
+    color: var(--primary-dark);
+
+}
+
+.bottom-nav{
+    border-top: 1px solid #a0cfb859;
+    display: flex;
+    gap: 1.8rem;
+    padding: 16px 0;
+}
+
+.bottom-nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.bottom-nav .active{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+/* Header  */
+.header{
+    padding-top: 2rem;
+    display: flex;
+    gap: 2.2rem;
+}
+
+.header div{
+    flex: 1;
+}
+
+.hero-image-wrapper img{
+    width: 100%;
+}
+
+.header-quote{
+    color: var(--primary);
+    background-color: var(--light-bg-color);
+    width: fit-content;
+    padding: 12px 20px;
+    border-radius: 24px;
+    border: 1px solid var(--primary);
+}
+
+.header h1{
+    font-size: 3.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.header-features{
+    font-size: 1.2rem;
+    margin: 16px 0;
+}
+
+.header-description{
+    font-size: 1.3rem;
+    margin: 8px 0;
+}
+
+.badges{
+    padding: 16px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.badges{
+    font-size: 1.4rem;
+}
+
+.badges div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--secondary);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.badges i{
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.header-btns{
+    margin-top: 16px;
+    display: flex;
+    gap: 24px;
+}
+
+.header-btns div{
+    background-color: var(--primary);
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.header-btns div a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.header-btns .courses-btn{
+    background-color: white;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+
+}
+
+.header-btns .courses-btn a{
+    color: var(--secondary);
 }
