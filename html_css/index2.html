@@ -15,7 +15,7 @@
         <div class="w-[85vw] m-auto">
             <div class="flex justify-between items-center py-2">
                 <div class="">
-                    <img class="w-40" src="https://codeit.com.np/storage/01KK0WD02GQYECHKK844MYEHN3.png" alt="">
+                    <img class="w-40" src="./assets/codeit-logo.png" alt="">
                 </div>
 
                 <div class="hidden xl:flex gap-10">
@@ -65,14 +65,24 @@
                         <i class="fa fa-sign-in" aria-hidden="true"></i>
                         <a class="ml-1" href="">Login</a>
                     </span>
-                    <div class="lg:hidden hover:
-                    bg-orange-100 
-                    py-2 px-3 
-                    rounded-lg"
+                    
+                    <button class="lg:hidden bg-orange-100
+                    text-orange-500
+                    py-2 px-3 rounded-lg hover:bg-orange-400 hover:text-orange-50"
                     onclick="show_menu()"
+                    id="open-menu-btn"
                     >
-                        Menu
-                    </div>
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <button class="hidden lg:hidden bg-orange-100
+                    text-orange-500
+                    py-2 px-3 rounded-lg hover:bg-orange-400 hover:text-orange-50"
+                    onclick="close_menu()"
+                    id="close-menu-btn"
+                    >
+                        <i class="fa fa-times"></i>
+                    </button>
                 </div>
 
 
@@ -88,6 +98,23 @@
             </div>
         </div>
     </nav>
+    <div id="sm-nav" class="border w-[300px] absolute top-0 left-[-350px] bg-orange-100 h-[100vh] duration-400 transition-all">
+        <div>
+            <h1 class="text-2xl font-bold text-center my-3">Menu</h1>
+        </div>
+        <hr>
+        <div class="flex flex-col p-6 gap-5">
+            <a class="text-orange-500 font-semibold" href="">Home</a>
+            <a href="">All Courses</a>
+            <a class="bg-orange-400 px-2 rounded-xl text-orange-50 font-semibold" href="">Upcoming Classes</a>
+            <a href="">Testimonials</a>
+            <a href="">Mentors</a>
+            <a href="">Recorded Videos</a>
+            <a href="">Contact Us</a>
+        </div>
+
+    </div>
+
     <header class="w-[85vw] m-auto flex flex-col-reverse xl:flex-row pt-12 gap-10">
         <div class="flex-1">
             <div class="text-orange-500 bg-orange-100 inline-block py-2 px-4 rounded-4xl border border-orange-500">
@@ -155,15 +182,85 @@
             </div>
         </div>
         <div class="flex-1">
-            <img src="https://codeit.com.np/storage/01KKTNYQAQHRD8910BR5XM127H.avif" alt="hero-image">
+            <img src="./assets/hero-image.avif" alt="hero-image">
         </div>
     </header>
 
+
+
     <script>
-        function show_menu(params){
-            alert
+        // DOM Manipulation
+        // Document Object Model
+
+        function hideOpenMenuBtn(){
+            // show open menu button
+            const openMenuBtn = document.getElementById("open-menu-btn")
+
+            openMenuBtn.classList.add("hidden")
         }
+
+        function showCloseMenuBtn(){
+            // show close menu button
+            const closeMenuBtn = document.getElementById("close-menu-btn")
+
+            closeMenuBtn.classList.remove("hidden")
+        }
+
+        // function showSmNavbar(){
+        //     const smScreenNav = document.getElementById("sm-nav")
+            
+        //     // console.log(smScreenNav)
+        //     // show sm-navbar
+        //     smScreenNav.classList.remove("hidden")
+        // }
+        function showSmNavbar(){
+            const smScreenNav = document.getElementById("sm-nav")
+            
+            // console.log(smScreenNav)
+            // show sm-navbar
+            smScreenNav.style.left = "0px"
+        }
+
+
+        function show_menu() {
+            showSmNavbar()
+            showCloseMenuBtn()
+            hideOpenMenuBtn()
+        }
+
+        // function hideSmNavbar(){
+        //     const smScreenNav = document.getElementById("sm-nav")
+
+        //     smScreenNav.classList.add("hidden")
+        // }
+        function hideSmNavbar(){
+            const smScreenNav = document.getElementById("sm-nav")
+
+            smScreenNav.style.left = "-350px"
+        }
+
+        function showOpenMenuBtn(){
+            // show open menu button
+            const openMenuBtn = document.getElementById("open-menu-btn")
+
+            openMenuBtn.classList.remove("hidden")
+        }
+
+        function hideCloseMenuBtn(){
+            // show close menu button
+            const closeMenuBtn = document.getElementById("close-menu-btn")
+
+            closeMenuBtn.classList.add("hidden")
+        }
+
+        function close_menu() {
+            hideSmNavbar()
+            hideCloseMenuBtn()
+            showOpenMenuBtn()
+        }
+
     </script>
+
 </body>
 
 </html>
